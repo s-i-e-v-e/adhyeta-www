@@ -1,0 +1,175 @@
+@import url("/a/font.css");
+:root {
+	--color-saffron: rgb(244, 196, 48);
+	--color-vermillion: rgb(227, 66, 52);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+	font-size: medium;
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+html {
+	font-family: Mukta, Verdana, Geneva, sans-serif;
+}
+
+main {
+	padding: 0vh;
+	width: 90%;
+	margin: auto;
+}
+
+p {
+	margin-top: 2vh;
+}
+
+header {
+	background-color: var(--color-saffron);
+	text-align: center;
+	border-bottom: 1px solid black;
+	& h1 {
+		color: black;
+		font-size: large;
+	}
+
+	& p {
+		margin: 0;
+		font-weight: 700;
+		color: var(--color-vermillion);
+		font-size: xx-small;
+	}
+}
+
+footer {
+	font-size: xx-small;
+	text-align: right;
+	vertical-align: middle;
+	& p {
+		padding: 1vw
+	}
+}
+
+#copyright {
+	& p {
+		& a {
+			& img {
+				height: 20px !important;
+				margin-left: 1px;
+				padding-top: 3px;
+				/*vertical-align:text-bottom;*/
+			}
+		}
+	}
+}
+
+document {
+	font-size: large;
+	& p {
+		text-indent: 5vw;
+	}
+
+	& author {
+		display: block;
+		text-align: left;
+	}
+
+	& title,
+	& h {
+		display: block;
+		text-align: left;
+		color: black;
+		font-size: x-large;
+		font-weight: 700;
+	}
+
+	& metadata {
+		display: block;
+		text-align: left;
+		color: grey;
+		font-size: xx-small;
+	}
+
+	& origin,
+	& copyright {
+		display: block;
+		text-align: right;
+		color: grey;
+		font-size: xx-small;
+	}
+
+	& origin::before {
+		content: "Source: ";
+	}
+
+	& copyright::before {
+		content: "Copyright: ";
+	}
+
+	& t, & corr, & sic {
+		display: inline;
+	}
+
+	& sic {
+		text-decoration: line-through;
+		color: red;
+	}
+
+	& v {
+		display: block;
+		text-align: center;
+		color: peru;
+	}
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+header {
+	min-height: 4vh;
+	flex-shrink: 0;
+}
+
+footer {
+	min-height: 2vh;
+	flex-shrink: 0;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+@media screen and (min-width: 960px) {
+	main {
+		padding: 0vh;
+		width: 60%;
+		margin: auto;
+	}
+
+	header {
+		min-height: 8vh;
+	}
+
+	footer {
+		min-height: 4vh;
+	}
+}
