@@ -156,6 +156,10 @@ footer {
 
 main {
 	flex: 1 0 auto;
+
+	& nav {
+		font-size: xx-small;
+	}
 }
 
 @media screen and (min-width: 960px) {
