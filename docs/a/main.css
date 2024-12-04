@@ -66,6 +66,11 @@ footer {
 	}
 }
 
+a {
+	text-decoration: none;
+	color: steelblue;
+}
+
 #copyright {
 	& p {
 		& a {
@@ -135,6 +140,12 @@ document {
 		display: block;
 		text-align: center;
 		color: peru;
+	}
+
+	& li {
+		list-style: square;
+		margin-left: 2vw;
+		color: var(--color-vermillion)
 	}
 }
 
