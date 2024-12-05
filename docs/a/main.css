@@ -1,7 +1,21 @@
-@import url("/a/font.css");
+
 :root {
 	--color-saffron: rgb(244, 196, 48);
 	--color-vermillion: rgb(227, 66, 52);
+	--tiny: 50%;
+	/*
+	@import url("/a/font-mukta.css");
+	--font: Mukta
+
+	@import url("/a/font-siddhanta.css");
+	--font: Siddhanta
+
+	@import url("/a/font-shobhika.css");
+	--font: Shobhika
+	*/
+
+	@import url("/a/font-notosans.css");
+	--font: 'Noto Sans'
 }
 
 *,
@@ -22,12 +36,12 @@ body {
 }
 
 body {
-	line-height: 1.5;
+	line-height: 1.25;
 	-webkit-font-smoothing: antialiased;
 }
 
 html {
-	font-family: Mukta, Verdana, Geneva, sans-serif;
+	font-family: var(--font), Verdana, Geneva, sans-serif;
 }
 
 main {
@@ -36,17 +50,13 @@ main {
 	margin: auto;
 }
 
-p {
-	margin-top: 2vh;
-}
-
 header {
 	background-color: var(--color-saffron);
 	text-align: center;
 	border-bottom: 1px solid black;
 	& h1 {
 		color: black;
-		font-size: large;
+		font-size: medium;
 	}
 
 	& p {
@@ -85,14 +95,21 @@ a {
 }
 
 document {
-	font-size: large;
+	font-size: medium;
+
+	title, author, metadata, copyright, origin {
+		margin-top: 1vh;
+	}
+
 	& p {
 		text-indent: 5vw;
+		margin-top: 2vh;
 	}
 
 	& author {
 		display: block;
 		text-align: left;
+		font-size: small;
 	}
 
 	& title,
@@ -100,7 +117,7 @@ document {
 		display: block;
 		text-align: left;
 		color: black;
-		font-size: x-large;
+		font-size: large;
 		font-weight: 700;
 	}
 
@@ -108,7 +125,7 @@ document {
 		display: block;
 		text-align: left;
 		color: grey;
-		font-size: xx-small;
+		font-size: var(--tiny);
 	}
 
 	& origin,
@@ -116,7 +133,7 @@ document {
 		display: block;
 		text-align: right;
 		color: grey;
-		font-size: xx-small;
+		font-size: var(--tiny);
 	}
 
 	& origin::before {
