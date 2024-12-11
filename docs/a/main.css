@@ -94,26 +94,30 @@ a {
 	}
 }
 
-document {
+a-document {
 	font-size: medium;
 
-	title, author, metadata, copyright, origin {
+	a-title, a-author, a-meta, a-copyright, a-source, a-note, a-category {
 		margin-top: 1vh;
 	}
 
-	& p {
-		text-indent: 5vw;
+	p {
 		margin-top: 2vh;
 	}
+	& a-sec {
+		& p {
+			text-indent: 5vw;
+		}
+	}
 
-	& author {
+	& a-author {
 		display: block;
 		text-align: left;
 		font-size: small;
 	}
 
-	& title,
-	& h {
+	& a-title,
+	& a-h {
 		display: block;
 		text-align: left;
 		color: black;
@@ -121,39 +125,39 @@ document {
 		font-weight: 700;
 	}
 
-	& metadata {
+	& a-meta {
 		display: block;
 		text-align: left;
 		color: grey;
 		font-size: var(--tiny);
 	}
 
-	& origin,
-	& copyright {
+	& a-source,
+	& a-copyright {
 		display: block;
 		text-align: right;
 		color: grey;
 		font-size: var(--tiny);
 	}
 
-	& origin::before {
+	& a-source::before {
 		content: "Source: ";
 	}
 
-	& copyright::before {
+	& a-copyright::before {
 		content: "Copyright: ";
 	}
 
-	& t, & corr, & sic {
+	& a-t, & a-corr, & a-sic {
 		display: inline;
 	}
 
-	& sic {
+	& a-sic {
 		text-decoration: line-through;
 		color: red;
 	}
 
-	& v {
+	& a-v {
 		display: block;
 		text-align: center;
 		color: peru;
@@ -163,6 +167,13 @@ document {
 		list-style: square;
 		margin-left: 2vw;
 		color: var(--color-vermillion)
+	}
+
+	hr {
+	    text-align: center;
+	    width: 20vw;
+	    margin: 2% 38%;
+	    border: 1px solid var(--color-vermillion);
 	}
 }
 
